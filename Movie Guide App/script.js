@@ -4,11 +4,11 @@ const inputBox = document.querySelector('.inputBox');
 
 const getMovieInfo = async (movie) => {
     try {
-        // Show loading state
+
         movieContainer.innerHTML = "<h2>Loading...</h2>";
         
-        const myAPIKey = "4336fcc8";
-        // Fixed URL - added = and https
+        const myAPIKey = "*******";
+
         const url = `https://www.omdbapi.com/?apikey=${myAPIKey}&t=${movie}`;
 
         const response = await fetch(url);
@@ -18,8 +18,7 @@ const getMovieInfo = async (movie) => {
         }
         
         const data = await response.json();
-        
-        // Check if movie was found
+
         if (data.Response === "False") {
             movieContainer.innerHTML = `<h2>Movie not found!</h2>
                                     <p>Try searching for another movie</p>`;
@@ -34,10 +33,9 @@ const getMovieInfo = async (movie) => {
 }
 
 const showMovieData = (data) => {
-    // Clear container
+
     movieContainer.innerHTML = "";
-    
-    // Destructure data with default values
+
     const {
         Title = "N/A",
         imdbRating = "N/A",
@@ -50,7 +48,6 @@ const showMovieData = (data) => {
         Runtime = "N/A"
     } = data;
 
-    // Create movie card
     const movieElement = document.createElement('div');
     movieElement.classList.add('movie-card');
     movieElement.innerHTML = `
@@ -82,7 +79,6 @@ searchForm.addEventListener('submit', (e) => {
     }
 });
 
-// Optional: Add search on Enter key
 inputBox.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         e.preventDefault();
