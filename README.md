@@ -10,7 +10,7 @@ Each project demonstrates practical use of modern web technologies with a focus 
 
 | Project Name | Description | Tech Stack |
 |---------------|-------------|-------------|
-| **XYZ** | XYZ | HTML, CSS, JavaScript |
+| **Movie Guide** | Simple web app where you can get information about any kind of movies and web series | HTML, CSS, JavaScript |
 | **XYZ** | XYZ. | HTML, CSS, JS, Node.js, Express |
 | **XYZ** | XYZ. | HTML, CSS, JS, MongoDB, Express |
 
